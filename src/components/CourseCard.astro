@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+
+const { specialization } = Astro.props
+---
+
+<div class="relative mx-auto w-[300px]">
+	<Image
+		src={specialization.imgSrc}
+		alt={specialization.imgAlt}
+		width={300}
+		height={200}
+		class={''}
+	/>
+	<div
+		class="absolute left-8 top-32 flex h-20 flex-col items-start justify-end"
+	>
+		<p
+			class="flex-1 text-pretty text-base font-medium uppercase leading-4 text-white"
+		>
+			{specialization.name}
+		</p>
+		<a
+			href=""
+			class="duration-250 inline-block h-8 w-36 rounded-full border-2 border-white text-center font-medium text-white transition ease-in-out hover:text-pretty hover:bg-white hover:font-semibold hover:text-black"
+		>
+			Descubre
+		</a>
+	</div>
+</div>

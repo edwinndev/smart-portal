@@ -1,0 +1,34 @@
+---
+import { Image } from 'astro:assets'
+import HeroImage from '../assets/HeroImage.webp'
+---
+
+<section class="bg-[#111438] pt-[88px]">
+	<div class="relative mx-auto max-w-7xl">
+		<Image
+			src={HeroImage}
+			width={1280}
+			height={720}
+			alt="MMJ Smart Electronics"
+			class=""
+		/>
+		<div class="absolute left-[5%] top-[20%]">
+			<h1
+				class="max-w-64 text-pretty text-base font-normal uppercase leading-normal tracking-wide text-white sm:max-w-xs sm:text-lg md:max-w-sm md:text-2xl lg:max-w-xl lg:text-4xl"
+			>
+				Domina la última tecnología en la industria de sistemas embebidos
+			</h1>
+			<a
+				href=""
+				class="mt-2 inline-block w-40 bg-white py-2 text-center text-sm font-medium uppercase tracking-wider hover:bg-gray-200 md:mt-8 lg:mt-4 lg:w-48 lg:text-xl"
+				>Contáctanos</a
+			>
+		</div>
+	</div>
+</section>
+
+<style>
+	h1 {
+		text-shadow: 0px 5px 21px rgba(0, 0, 0, 0.6);
+	}
+</style>

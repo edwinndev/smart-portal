@@ -1,0 +1,47 @@
+---
+import CourseCard from './CourseCard.astro'
+import SistemasEmbebidos from '@/assets/ThumbnailCourses/SistemasEmbebidos.webp'
+
+const specializations = [
+	{
+		name: 'Desarrollo de sistemas embebidos',
+		imgSrc: SistemasEmbebidos,
+		imgAlt: 'Desarrollo de sistemas embebidos',
+	},
+	{
+		name: 'Desarrollo de software',
+		imgSrc: SistemasEmbebidos,
+		imgAlt: 'Desarrollo de software',
+	},
+	{
+		name: 'Internet de las cosas IoT',
+		imgSrc: SistemasEmbebidos,
+		imgAlt: 'Internet de las cosas IoT',
+	},
+	{
+		name: 'Desarrollo de hardware',
+		imgSrc: SistemasEmbebidos,
+		imgAlt: 'Desarrollo de hardware',
+	},
+	{
+		name: 'Automatización industrial',
+		imgSrc: SistemasEmbebidos,
+		imgAlt: 'Automatización industrial',
+	},
+	{
+		name: 'Cursos presenciales',
+		imgSrc: SistemasEmbebidos,
+		imgAlt: 'Cursos presenciales',
+	},
+]
+---
+
+<ul
+	class="mx-auto flex flex-wrap content-center items-center justify-center gap-8"
+>
+	{
+		specializations.map((specialization) => (
+			<CourseCard specialization={specialization} />
+		))
+	}
+</ul>
