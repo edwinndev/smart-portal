@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets'
+import SistemasEmbebidos from '@/assets/ThumbnailCourses/SistemasEmbebidos.webp'
+---
+
+<div>
+	<Image
+		src={SistemasEmbebidos}
+		alt="Sistemas embebidos"
+		width={512}
+		height={512}
+		class="invisible hidden"
+	/>
+	<h3
+		class="mb-4 text-pretty text-center text-2xl font-bold uppercase text-black"
+	>
+		Sistema de adquisición de datos
+	</h3>
+	<p class="mx-auto max-w-80 text-pretty text-center text-sm font-medium">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ad rem, harum
+		veritatis vel consequatur quia aut odit sed error laborum, corporis iusto
+		excepturi incidunt sint quas illum eveniet deleniti.
+	</p>
+	<ul class="flex flex-wrap">
+		<li class="flex-[50%] text-sm font-medium">Gran alcance de medición</li>
+		<li class="flex-[50%] text-sm font-medium">Gran alcance de medición</li>
+		<li class="flex-[50%] text-sm font-medium">Gran alcance de medición</li>
+		<li class="flex-[50%] text-sm font-medium">Gran alcance de medición</li>
+	</ul>
+</div>
