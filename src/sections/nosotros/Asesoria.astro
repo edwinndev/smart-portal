@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets'
+import phone from '@public/svg/phone.svg'
+import pin from '@public/svg/pin.svg'
+import mapa from '@/assets/Mapa.webp'
+---
+
+<section class="py-12">
+	<h2
+		class="mb-8 text-pretty text-center text-xl font-medium uppercase text-black md:mb-12 md:text-3xl"
+	>
+		Te asesoramos
+	</h2>
+	<div
+		class="max-w-7xl lg:mx-auto lg:flex lg:items-center lg:justify-evenly lg:gap-1"
+	>
+		<form action="" class="mx-auto max-w-sm rounded-xl bg-gray-500 p-4 lg:mx-0">
+			<input
+				type="text"
+				placeholder="Nombre"
+				class="mb-2 w-full rounded-full p-2 text-sm text-black"
+			/>
+			<input
+				type="text"
+				placeholder="Email"
+				class="mb-2 w-full rounded-full p-2 text-sm text-black"
+			/>
+			<input
+				type="text"
+				placeholder="teléfono"
+				class="mb-2 w-full rounded-full p-2 text-sm text-black"
+			/>
+			<textarea
+				class="mb-2 w-full rounded-xl p-2 text-sm text-black"
+				name=""
+				id=""
+				cols="30"
+				rows="10"
+				placeholder="Comentario"></textarea>
+			<button
+				type="submit"
+				class="w-full rounded-xl bg-blue-700 py-2 text-base font-semibold text-white"
+				>Enviar</button
+			>
+			<!-- catchap -->
+		</form>
+		<div class="hidden lg:block">
+			<Image src={mapa} alt="hero" width={512} height={312} class="" />
+			<ul
+				class="mx-auto mb-8 flex max-w-xl flex-col items-start justify-center gap-4 md:items-center lg:items-start"
+			>
+				<li class="flex items-center gap-2">
+					<Image src={phone} alt="phone logo" width={32} height={32} />
+					<span class="text-black">+51 945 241 137</span>
+				</li>
+				<li class="flex items-center gap-2">
+					<Image src={pin} alt="pin logo" width={32} height={32} />
+					<div>
+						<span class="inline-block text-pretty text-black"
+							>Av. Perú #1716, 2do piso - San Martín de Porres - Perú</span
+						>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

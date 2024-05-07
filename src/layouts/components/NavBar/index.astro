@@ -4,16 +4,20 @@ import HamburguerNav from './Hamburguer.astro'
 
 <nav class="fixed z-50 w-full bg-gradient-to-b from-slate-500 pb-2">
 	<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
-		<img
-			src="/images/MMJ-Branding.png"
-			width="256px"
-			class="h-12 w-auto lg:h-16 lg:w-auto"
-			alt="Logo de MMJ Smart Electronics"
-		/>
+		<a href="/">
+			<img
+				src="/images/MMJ-Branding.png"
+				width="256px"
+				class="h-12 w-auto lg:h-16 lg:w-auto"
+				alt="Logo de MMJ Smart Electronics"
+			/>
+		</a>
 		<ul
 			class="absolute hidden gap-10 text-base font-bold uppercase text-white lg:visible lg:relative lg:flex"
 		>
-			<a class="text-lg font-medium hover:underline" href="/">Nosotros</a>
+			<a class="text-lg font-medium hover:underline" href="/nosotros"
+				>Nosotros</a
+			>
 			<a class="text-lg font-medium hover:underline" href="/cursos">Cursos</a>
 			<a class="text-lg font-medium hover:underline" href="#">Servicios</a>
 			<a class="text-lg font-medium hover:underline" href="#">Proyectos</a>
