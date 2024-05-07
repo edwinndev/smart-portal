@@ -1,30 +1,42 @@
 ---
 import { Image } from 'astro:assets'
-import SistemasEmbebidos from '@/assets/ThumbnailCourses/SistemasEmbebidos.webp'
+import SistemasEmbebidos from '@/assets/Inicio/DataAdq.webp'
+
+const { title } = Astro.props
 ---
 
 <div>
-	<Image
-		src={SistemasEmbebidos}
-		alt="Sistemas embebidos"
-		width={512}
-		height={512}
-		class="invisible hidden"
-	/>
-	<h3
-		class="mb-4 text-pretty text-center text-2xl font-bold uppercase text-black"
+	<div
+		class="place-content-center lg:grid lg:w-screen lg:grid-cols-[512px_minmax(400px,_640px)] lg:grid-rows-1 lg:gap-8 lg:px-4"
 	>
-		Sistema de adquisición de datos
-	</h3>
-	<p class="mx-auto max-w-80 text-pretty text-center text-sm font-medium">
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ad rem, harum
-		veritatis vel consequatur quia aut odit sed error laborum, corporis iusto
-		excepturi incidunt sint quas illum eveniet deleniti.
-	</p>
-	<ul class="flex flex-wrap">
-		<li class="flex-[50%] text-sm font-medium">Gran alcance de medición</li>
-		<li class="flex-[50%] text-sm font-medium">Gran alcance de medición</li>
-		<li class="flex-[50%] text-sm font-medium">Gran alcance de medición</li>
-		<li class="flex-[50%] text-sm font-medium">Gran alcance de medición</li>
-	</ul>
+		<Image
+			src={SistemasEmbebidos}
+			alt="Sistemas embebidos"
+			width={512}
+			height={512}
+			class="mx-auto hidden shadow-lg lg:block lg:w-[512px] lg:self-end"
+		/>
+		<div>
+			<h3
+				class="mb-4 w-screen text-pretty px-4 text-center text-2xl font-bold uppercase text-black lg:w-auto lg:max-w-xl lg:px-0 lg:text-start lg:text-3xl"
+			>
+				{title}
+			</h3>
+			<p
+				class="mx-auto mb-8 max-w-80 text-pretty text-center text-sm font-medium lg:mx-0 lg:mb-16 lg:max-w-xl lg:text-start lg:text-xl lg:font-normal lg:tracking-wide"
+			>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ad rem,
+				harum veritatis vel consequatur quia aut odit sed error laborum,
+				corporis iusto excepturi incidunt sint quas illum eveniet deleniti.
+			</p>
+			<ul
+				class="mx-auto flex max-w-96 flex-wrap items-center justify-center gap-4 lg:mx-0 lg:max-w-xl lg:justify-start"
+			>
+				<li class="text-sm font-medium lg:text-lg">Gran alcance de medición</li>
+				<li class="text-sm font-medium lg:text-lg">Gran alcance de medición</li>
+				<li class="text-sm font-medium lg:text-lg">Gran alcance de medición</li>
+				<li class="text-sm font-medium lg:text-lg">Gran alcance de medición</li>
+			</ul>
+		</div>
+	</div>
 </div>
