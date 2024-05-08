@@ -1,0 +1,30 @@
+---
+import { specialites } from '@/data/courses'
+import Layout from '@/layouts/Layout.astro'
+import HeroSpecialite from '@/sections/specialite/HeroSpecialite.astro'
+import Specialites from '@/sections/specialite/Specialites.astro'
+import type { GetStaticPaths } from 'astro'
+
+export const getStaticPaths = (() => {
+	return [
+		{ params: { specialite: 'software' } },
+		{ params: { specialite: 'hardware' } },
+		{ params: { specialite: 'iot' } },
+		{ params: { specialite: 'auto' } },
+		{ params: { specialite: 'firmware' } },
+		{ params: { specialite: 'presencial' } },
+	]
+}) satisfies GetStaticPaths
+
+const { specialite } = Astro.params
+---
+
+<Layout title="MMJ Smart Electronics">
+	<HeroSpecialite
+		specialite={specialites[`${specialite}` as keyof typeof specialites]}
+	/>
+	<Specialites
+		specializations={specialites[`${specialite}` as keyof typeof specialites]
+			.courses}
+	/>
+</Layout>

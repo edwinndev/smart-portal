@@ -1,51 +1,14 @@
 ---
 import CourseCard from './CourseCard.astro'
-import SistemasEmbebidos from '@/assets/ThumbnailCourses/SistemasEmbebidosThumb.webp'
-import DevelopSW from '@/assets/ThumbnailCourses/DesarrolloSWThumb.webp'
-import InternetThingsThumb from '@/assets/ThumbnailCourses/InternetThingsThumb.webp'
-import DesarrollodeHWThumb from '@/assets/ThumbnailCourses/DesarrollodeHWThumb.webp'
-import AutoIndustrialThumb from '@/assets/ThumbnailCourses/AutoIndustrialThumb.webp'
-import PresencialThumb from '@/assets/ThumbnailCourses/PresencialThumb.webp'
 
-const specializations = [
-	{
-		name: 'Desarrollo de sistemas embebidos',
-		imgSrc: SistemasEmbebidos,
-		imgAlt: 'Desarrollo de sistemas embebidos',
-	},
-	{
-		name: 'Desarrollo de software',
-		imgSrc: DevelopSW,
-		imgAlt: 'Desarrollo de software',
-	},
-	{
-		name: 'Internet de las cosas IoT',
-		imgSrc: InternetThingsThumb,
-		imgAlt: 'Internet de las cosas IoT',
-	},
-	{
-		name: 'Desarrollo de hardware',
-		imgSrc: DesarrollodeHWThumb,
-		imgAlt: 'Desarrollo de hardware',
-	},
-	{
-		name: 'Automatización industrial',
-		imgSrc: AutoIndustrialThumb,
-		imgAlt: 'Automatización industrial',
-	},
-	{
-		name: 'Cursos presenciales',
-		imgSrc: PresencialThumb,
-		imgAlt: 'Cursos presenciales',
-	},
-]
+const { specializations } = Astro.props
 ---
 
 <ul
 	class="mx-auto flex flex-wrap content-center items-center justify-center gap-8"
 >
 	{
-		specializations.map((specialization) => (
+		specializations.map((specialization: any) => (
 			<CourseCard specialization={specialization} />
 		))
 	}
