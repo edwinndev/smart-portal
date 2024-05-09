@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets'
+import whatsapp from '@/assets/Course/whatsapp.webp'
+---
+
+<section class="mx-auto max-w-7xl px-4 py-12">
+	<Image
+		src={whatsapp}
+		alt="whatsapp icon"
+		height={256}
+		width={256}
+		class="mx-auto"
+	/>
+	<p class="text-center text-lg font-bold">¿Tienes dudas?</p>
+	<p class="mb-4 text-center text-lg font-normal">
+		Contáctanos por Whatsapp para ayudarte
+	</p>
+	<div class="grid place-content-center">
+		<a
+			href="#"
+			class="mx-auto inline-block rounded bg-green-500 px-4 py-2 font-bold text-white hover:bg-green-700"
+			>Contáctanos</a
+		>
+	</div>
+</section>

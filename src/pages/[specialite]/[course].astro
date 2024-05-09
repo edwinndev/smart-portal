@@ -1,0 +1,39 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Description from '@/sections/course/Description.astro'
+import HeroCourse from '@/sections/course/HeroCourse.astro'
+import NeedKnow from '@/sections/course/NeedKnow.astro'
+import WhatYouLearn from '@/sections/course/WhatYouLearn.astro'
+import Beneficts from '@/sections/course/Beneficts.astro'
+import Proyects from '@/sections/course/Proyects.astro'
+import TechLearn from '@/sections/course/TechLearn.astro'
+import Whatsapp from '@/sections/course/Whatsapp.astro'
+import OtherCourses from '@/sections/course/OtherCourses.astro'
+import FAQ from '@/sections/course/FAQ.astro'
+import Kit from '@/sections/course/Kit.astro'
+import WhyChoose from '@/sections/course/WhyChoose.astro'
+
+export function getStaticPaths() {
+	return [
+		{ params: { specialite: 'software', course: 'ansi-c' } },
+		{ params: { specialite: 'hardware', course: 'altium' } },
+	]
+}
+
+const { specialite, course } = Astro.params
+---
+
+<Layout title="MMJ Smart Electronics">
+	<HeroCourse />
+	<Description />
+	<NeedKnow />
+	<WhatYouLearn />
+	<Beneficts />
+	<Proyects />
+	<TechLearn />
+	<Kit />
+	<WhyChoose />
+	<FAQ />
+	<OtherCourses />
+	<Whatsapp />
+</Layout>

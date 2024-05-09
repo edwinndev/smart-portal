@@ -1,0 +1,61 @@
+---
+import { Image } from 'astro:assets'
+import tablet from '@/assets/Course/Tablet.webp'
+import check from '@public/svg/check.svg'
+---
+
+<section
+	class="mx-auto max-w-7xl py-12 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:items-center lg:py-16"
+>
+	<Image
+		src={tablet}
+		alt="Tablet"
+		width={640}
+		height={768}
+		class="hidden lg:block"
+	/>
+	<div>
+		<h2
+			class="mb-4 text-center text-xl font-bold uppercase md:text-3xl lg:text-start"
+		>
+			Kit de desarrollo
+		</h2>
+		<ul class="flex flex-wrap items-center justify-center gap-4">
+			<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
+				<Image
+					src={check}
+					alt="ícono de check"
+					width={24}
+					height={24}
+					class="pt-1 md:pt-2"
+				/>
+				<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+					aut?.
+				</p>
+			</li>
+			<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
+				<Image
+					src={check}
+					alt="ícono de check"
+					width={24}
+					height={24}
+					class="pt-1 md:pt-2"
+				/>
+				<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+					aut?.
+				</p>
+			</li>
+		</ul>
+		<div
+			class="flex items-center justify-center gap-4 px-4 lg:justify-start lg:px-0"
+		>
+			<h4
+				class="w-52 rounded bg-black py-2 text-center text-lg font-medium uppercase text-white"
+			>
+				Whatsapp
+			</h4>
+		</div>
+	</div>
+</section>

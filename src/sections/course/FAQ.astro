@@ -1,0 +1,140 @@
+<section class="mx-auto max-w-6xl py-12">
+	<h2 class="mb-8 text-center text-xl font-semibold uppercase md:text-3xl">
+		Preguntas frecuentes
+	</h2>
+	<div class="m-4">
+		<div class="slider">
+			<input
+				class="hidden"
+				type="radio"
+				name="acordeonfaq"
+				id="acordeonfaq1"
+				checked
+			/>
+			<input class="hidden" type="radio" name="acordeonfaq" id="acordeonfaq2" />
+			<input class="hidden" type="radio" name="acordeonfaq" id="acordeonfaq3" />
+			<input class="hidden" type="radio" name="acordeonfaq" id="acordeonfaq4" />
+			<input class="hidden" type="radio" name="acordeonfaq" id="acordeonfaq5" />
+			<input class="hidden" type="radio" name="acordeonfaq" id="acordeonfaq6" />
+
+			<!-- </div> -->
+			<div class="content">
+				<div class="mb-4">
+					<label
+						for="acordeonfaq1"
+						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
+					>
+						Tema1: Sé un profesional con altium
+					</label>
+					<ul id="ul1" class="max-h-0 overflow-hidden px-8">
+						<p class="mt-2 font-normal tracking-wide lg:text-lg">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+							ducimus quo eius a voluptas culpa repellendus quasi. Excepturi
+							voluptates dolorum esse a facilis voluptas et amet. Totam optio
+							sint laborum!
+						</p>
+					</ul>
+				</div>
+				<div class="mb-4">
+					<label
+						for="acordeonfaq2"
+						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
+					>
+						Tema1: Sé un profesional con altium
+					</label>
+					<ul id="ul2" class="max-h-0 overflow-hidden px-8">
+						<p class="mt-2 font-normal tracking-wide lg:text-lg">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+							ducimus quo eius a voluptas culpa repellendus quasi. Excepturi
+							voluptates dolorum esse a facilis voluptas et amet. Totam optio
+							sint laborum!
+						</p>
+					</ul>
+				</div>
+				<div class="mb-4">
+					<label
+						for="acordeonfaq3"
+						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
+					>
+						Tema1: Sé un profesional con altium
+					</label>
+					<ul id="ul3" class="max-h-0 overflow-hidden px-8">
+						<p class="mt-2 font-normal tracking-wide lg:text-lg">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+							ducimus quo eius a voluptas culpa repellendus quasi. Excepturi
+							voluptates dolorum esse a facilis voluptas et amet. Totam optio
+							sint laborum!
+						</p>
+					</ul>
+				</div>
+				<div class="mb-4">
+					<label
+						for="acordeonfaq4"
+						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
+					>
+						Tema1: Sé un profesional con altium
+					</label>
+					<ul id="ul4" class="max-h-0 overflow-hidden px-8">
+						<p class="mt-2 font-normal tracking-wide lg:text-lg">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+							ducimus quo eius a voluptas culpa repellendus quasi. Excepturi
+							voluptates dolorum esse a facilis voluptas et amet. Totam optio
+							sint laborum!
+						</p>
+					</ul>
+				</div>
+				<div class="mb-4">
+					<label
+						for="acordeonfaq5"
+						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
+					>
+						Tema1: Sé un profesional con altium
+					</label>
+					<ul id="ul5" class="max-h-0 overflow-hidden px-8">
+						<p class="mt-2 font-normal tracking-wide lg:text-lg">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+							ducimus quo eius a voluptas culpa repellendus quasi. Excepturi
+							voluptates dolorum esse a facilis voluptas et amet. Totam optio
+							sint laborum!
+						</p>
+					</ul>
+				</div>
+				<div class="mb-4">
+					<label
+						for="acordeonfaq6"
+						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
+					>
+						Tema1: Sé un profesional con altium
+					</label>
+					<ul id="ul6" class="max-h-0 overflow-hidden px-8">
+						<p class="mt-2 font-normal tracking-wide lg:text-lg">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
+							ducimus quo eius a voluptas culpa repellendus quasi. Excepturi
+							voluptates dolorum esse a facilis voluptas et amet. Totam optio
+							sint laborum!
+						</p>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<a
+			class="mx-auto mt-8 block max-w-96 rounded bg-black py-2 text-center text-lg font-medium uppercase text-white"
+			href="">Descarga el temario completo</a
+		>
+	</div>
+</section>
+
+<style>
+	ul {
+		transition: all 0.3s ease-in-out;
+	}
+
+	.slider input:nth-child(1):checked ~ .content > div:nth-child(1) > ul,
+	.slider input:nth-child(2):checked ~ .content > div:nth-child(2) > ul,
+	.slider input:nth-child(3):checked ~ .content > div:nth-child(3) > ul,
+	.slider input:nth-child(4):checked ~ .content > div:nth-child(4) > ul,
+	.slider input:nth-child(5):checked ~ .content > div:nth-child(5) > ul,
+	.slider input:nth-child(6):checked ~ .content > div:nth-child(6) > ul {
+		max-height: 256px;
+	}
+</style>

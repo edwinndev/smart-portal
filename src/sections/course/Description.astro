@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets'
+import tablet from '@/assets/Course/Tablet.webp'
+import clock from '@public/svg/clockHours.svg'
+---
+
+<section
+	class="mx-auto max-w-7xl py-12 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:items-center lg:py-16"
+>
+	<Image
+		src={tablet}
+		alt="Tablet"
+		width={640}
+		height={768}
+		class="hidden lg:block"
+	/>
+	<div>
+		<h2
+			class="mb-4 text-center text-xl font-bold uppercase md:text-3xl lg:text-start"
+		>
+			Descripción del curso
+		</h2>
+		<p
+			class="mx-auto mb-8 max-w-80 text-pretty text-center text-sm font-medium md:text-base lg:mx-0 lg:mb-16 lg:max-w-xl lg:text-start lg:text-xl lg:font-normal lg:tracking-wide"
+		>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum quo quae,
+			officiis beatae quos consectetur iusto nam consequatur ullam autem
+			reiciendis possimus, modi nobis soluta adipisci? Ratione dicta fugit illo.
+		</p>
+		<div
+			class="flex items-center justify-center gap-4 px-4 lg:justify-start lg:px-0"
+		>
+			<h4
+				class="flex w-52 items-center justify-center gap-4 rounded bg-black py-2 text-center text-lg font-medium uppercase text-white"
+			>
+				<Image
+					src={clock}
+					alt="icono de un cronómetro"
+					width={32}
+					height={32}
+				/>
+				48 horas
+			</h4>
+			<h4
+				class="w-52 rounded bg-black py-2 text-center text-lg font-medium uppercase text-white"
+			>
+				Clases en vivo
+			</h4>
+		</div>
+	</div>
+</section>

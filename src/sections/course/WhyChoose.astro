@@ -1,0 +1,83 @@
+---
+import specialistIcon from '@public/svg/MakeSpecialist.svg'
+import StartTeacherIcon from '@public/svg/SpecificDocents.svg'
+import BumbIcon from '@public/svg/SolMedida.svg'
+import TechGrownIcon from '@public/svg/TechModern.svg'
+import { Image } from 'astro:assets'
+---
+
+<section class="bg-black py-12">
+	<h2
+		class="mb-8 text-pretty text-center text-xl font-semibold uppercase text-white md:mb-12 md:text-3xl"
+	>
+		¿Por qué escogernos?
+	</h2>
+	<p
+		class="mx-auto mb-12 max-w-80 text-center text-sm text-white md:max-w-lg lg:max-w-2xl lg:text-base xl:max-w-3xl xl:text-lg"
+	>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt
+		voluptates porro amet incidunt assumenda beatae cupiditate asperiores, ab
+		quos suscipit earum omnis sequi molestiae rem inventore? Harum neque
+		suscipit magnam?
+	</p>
+	<ul
+		class="flex flex-wrap items-center justify-center gap-2 md:gap-8 lg:mx-auto lg:max-w-4xl lg:gap-12 xl:max-w-6xl xl:gap-16"
+	>
+		<li class="mx-auto flex items-center justify-start gap-4 md:flex-col">
+			<Image
+				src={specialistIcon}
+				alt="Icono de especialista"
+				width={64}
+				height={64}
+				class="h-24"
+			/>
+			<p
+				class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-40 lg:text-pretty"
+			>
+				Formamos especialistas
+			</p>
+		</li>
+		<li class="mx-auto flex items-center justify-start gap-4 md:flex-col">
+			<Image
+				src={StartTeacherIcon}
+				alt="Icono de especialista"
+				width={64}
+				height={64}
+				class="h-24"
+			/>
+			<p
+				class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-40 lg:text-pretty"
+			>
+				Docentes especializados
+			</p>
+		</li>
+		<li class="mx-auto flex items-center justify-start gap-4 md:flex-col">
+			<Image
+				src={BumbIcon}
+				alt="Icono de especialista"
+				width={64}
+				height={64}
+				class="h-24"
+			/>
+			<p
+				class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-56 lg:text-pretty"
+			>
+				Soluciones embebidas a medida
+			</p>
+		</li>
+		<li class="mx-auto flex items-center justify-start gap-4 md:flex-col">
+			<Image
+				src={TechGrownIcon}
+				alt="Icono de especialista"
+				width={64}
+				height={64}
+				class="h-24"
+			/>
+			<p
+				class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-40 lg:text-pretty"
+			>
+				Tecnología de vanguardia
+			</p>
+		</li>
+	</ul>
+</section>
