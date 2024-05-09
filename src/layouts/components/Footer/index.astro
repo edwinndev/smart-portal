@@ -9,11 +9,17 @@ import instagram from '@public/svg/instagram.svg'
 import linkedin from '@public/svg/linkedin.svg'
 ---
 
-<footer class="bg-black py-12 px-4">
-	<div class="mx-auto max-w-5xl lg:flex lg:justify-between">
+<footer class="bg-black py-12">
+	<div class="mx-auto max-w-6xl px-12 lg:flex lg:justify-between">
 		<div>
-			<h3 class="mb-8 text-pretty text-center lg:text-start text-2xl font-normal uppercase text-white md:mb-12 md:text-3xl">Contáctanos</h3>
-			<ul class="flex flex-col gap-4 lg:items-start justify-center items-start md:items-center max-w-xl mx-auto mb-8">
+			<h3
+				class="mb-8 text-pretty text-center text-2xl font-normal uppercase text-white md:mb-12 md:text-3xl lg:text-start"
+			>
+				Contáctanos
+			</h3>
+			<ul
+				class="mx-auto mb-8 flex max-w-xl flex-col items-start justify-center gap-4 md:items-center lg:flex-wrap lg:items-start"
+			>
 				<li class="flex items-center gap-2">
 					<Image src={phone} alt="phone logo" width={32} height={32} />
 					<span class="text-white">+51 945 241 137</span>
@@ -24,20 +30,27 @@ import linkedin from '@public/svg/linkedin.svg'
 				</li>
 				<li class="flex items-center gap-2">
 					<Image src={pin} alt="pin logo" width={32} height={32} />
-				<div>
-					<span class="text-white inline-block text-pretty">Av. Perú #1716, 2do piso - San Martín de Porres - Perú</span>
-				</div>
+					<div>
+						<span class="inline-block text-pretty text-white"
+							>Av. Perú #1716, 2do piso - San Martín de Porres - Perú</span
+						>
+					</div>
 				</li>
 			</ul>
 		</div>
 		<div>
-			<h3 class="mb-8 text-pretty text-center text-2xl font-normal uppercase text-white md:mb-12 md:text-3xl lg:text-start">
+			<h3
+				class="mb-8 text-pretty text-center text-2xl font-normal uppercase text-white md:mb-12 md:text-3xl lg:text-start"
+			>
 				Síguenos
 			</h3>
-			<ul class="flex gap-6 justify-center md:gap-12">
-				<Image src={facebook} alt="pin logo" width={32} height={32} />
-				<Image src={youtube} alt="pin logo" width={32} height={32} />
-				<Image src={instagram} alt="pin logo" width={32} height={32} />
+			<ul class="flex justify-center gap-6 md:gap-12">
+				<Image src={facebook} alt="pin logo" width={32} height={32} class="" />
+				<div class="h-8 w-[1px] bg-white"></div>
+				<Image src={youtube} alt="pin logo" width={32} height={32} class="" />
+				<div class="h-8 w-[1px] bg-white"></div>
+				<Image src={instagram} alt="pin logo" width={32} height={32} class="" />
+				<div class="h-8 w-[1px] bg-white"></div>
 				<Image src={linkedin} alt="pin logo" width={32} height={32} />
 			</ul>
 		</div>

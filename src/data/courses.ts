@@ -20,10 +20,19 @@ import DesarrollodeHWThumb from '@/assets/ThumbnailCourses/DesarrollodeHWThumb.w
 import AutoIndustrialThumb from '@/assets/ThumbnailCourses/AutoIndustrialThumb.webp'
 import PresencialThumb from '@/assets/ThumbnailCourses/PresencialThumb.webp'
 
+// Líneas de carrera banners
+import SistemasEmbebidosBanner from '@/assets/Banners/firmware.webp'
+import DevelopSWBanner from '@/assets/Banners/software.webp'
+import InternetThingsBanner from '@/assets/Banners/iot.webp'
+import DesarrollodeHWBanner from '@/assets/Banners/hardware.webp'
+import AutoIndustrialBanner from '@/assets/Banners/auto.webp'
+import PresencialBanner from '@/assets/Banners/presencial.webp'
+
+
 export const specialites = {
   "software": {
     name: "Desarrollo de software",
-    bannerSrc: DevelopSW,
+    bannerSrc: DevelopSWBanner,
     courses: [
       {
         name: "Especialización en lenguaje Ansi C orientado a los sistemas embebidos",
@@ -47,7 +56,7 @@ export const specialites = {
   },
   "hardware": {
     name: "Desarrollo de hardware",
-    bannerSrc: DesarrollodeHWThumb,
+    bannerSrc: DesarrollodeHWBanner,
     courses: [
       {
         name: "Especialización en diseño electrónico profesional con Altium Designer y Normas IPC",
@@ -65,7 +74,7 @@ export const specialites = {
   },
   "iot": {
     name: "Internet de las cosas IoT",
-    bannerSrc: InternetThingsThumb,
+    bannerSrc: InternetThingsBanner,
     courses: [
       {
         name: "Desarrollo de aplicaciones IoT con Esp32 y Arduino",
@@ -83,7 +92,7 @@ export const specialites = {
   },
   "auto": {
     name: "Automatización industrial",
-    bannerSrc: AutoIndustrialThumb,
+    bannerSrc: AutoIndustrialBanner,
     courses: [
       {
         name: "Programación de procesos industriales con PLC S7-1200 PLC",
@@ -101,7 +110,7 @@ export const specialites = {
   },
   "firmware": {
     name: "Desarrollo de sistemas embebidos con mcu",
-    bannerSrc: SistemasEmbebidos,
+    bannerSrc: SistemasEmbebidosBanner,
     courses: [
       {
         name: "Programación de microcontroladores PIC y comunicación WiFi para IoT",
@@ -125,7 +134,7 @@ export const specialites = {
   },
   "presencial": {
     name: "Desarrollo de hardware",
-    bannerSrc: PresencialThumb,
+    bannerSrc: PresencialBanner,
     courses: [
       {
         name: "Especialización en diseño electrónico profesional con Altium Designer y Normas IPC",

@@ -1,13 +1,13 @@
 ---
 import CardCoursesContainer from '@/components/CardCoursesContainer.astro'
-const { specializations } = Astro.props
+const { specialization } = Astro.props
 ---
 
 <section class="mx-auto max-w-7xl py-12">
 	<h2
 		class="mb-8 text-center text-xl font-semibold uppercase md:mb-12 md:text-3xl"
 	>
-		Especializaciones
+		{specialization.name}
 	</h2>
-	<CardCoursesContainer specializations={specializations} />
+	<CardCoursesContainer specializations={specialization.courses} />
 </section>

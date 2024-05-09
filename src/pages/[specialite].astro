@@ -24,7 +24,6 @@ const { specialite } = Astro.params
 		specialite={specialites[`${specialite}` as keyof typeof specialites]}
 	/>
 	<Specialites
-		specializations={specialites[`${specialite}` as keyof typeof specialites]
-			.courses}
+		specialization={specialites[`${specialite}` as keyof typeof specialites]}
 	/>
 </Layout>
