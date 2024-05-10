@@ -7,14 +7,14 @@ const { title } = Astro.props
 
 <div>
 	<div
-		class="place-content-center lg:grid lg:w-screen lg:grid-cols-[512px_minmax(400px,_640px)] lg:grid-rows-1 lg:gap-8 lg:px-4"
+		class="snap-center place-content-center lg:grid lg:w-screen lg:grid-cols-[512px_minmax(400px,_640px)] lg:grid-rows-1 lg:gap-8 lg:px-4"
 	>
 		<Image
 			src={SistemasEmbebidos}
 			alt="Sistemas embebidos"
 			width={512}
 			height={512}
-			class="mx-auto hidden shadow-lg lg:block lg:w-[512px] lg:self-end"
+			class="mx-auto hidden rounded-xl shadow-lg lg:block lg:w-[512px] lg:self-end"
 		/>
 		<div>
 			<h3
@@ -23,19 +23,27 @@ const { title } = Astro.props
 				{title}
 			</h3>
 			<p
-				class="mx-auto mb-8 max-w-80 text-pretty text-center text-sm font-medium lg:mx-0 lg:mb-16 lg:max-w-xl lg:text-start lg:text-xl lg:font-normal lg:tracking-wide"
+				class="mx-auto mb-8 max-w-80 text-pretty text-center text-sm font-medium md:max-w-xl md:text-base lg:mx-0 lg:mb-16 lg:max-w-xl lg:text-start lg:text-xl lg:font-normal lg:tracking-wide xl:max-w-3xl"
 			>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ad rem,
 				harum veritatis vel consequatur quia aut odit sed error laborum,
 				corporis iusto excepturi incidunt sint quas illum eveniet deleniti.
 			</p>
 			<ul
-				class="mx-auto flex max-w-96 flex-wrap items-center justify-center gap-4 lg:mx-0 lg:max-w-xl lg:justify-start"
+				class="mx-auto flex max-w-96 flex-wrap items-center justify-center gap-4 lg:mx-0 lg:max-w-xl lg:justify-start xl:gap-8"
 			>
-				<li class="text-sm font-medium lg:text-lg">Gran alcance de medición</li>
-				<li class="text-sm font-medium lg:text-lg">Gran alcance de medición</li>
-				<li class="text-sm font-medium lg:text-lg">Gran alcance de medición</li>
-				<li class="text-sm font-medium lg:text-lg">Gran alcance de medición</li>
+				<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
+					Gran alcance de medición
+				</li>
+				<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
+					Gran alcance de medición
+				</li>
+				<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
+					Gran alcance de medición
+				</li>
+				<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
+					Gran alcance de medición
+				</li>
 			</ul>
 			<a
 				href="#"
