@@ -1,14 +1,14 @@
 ---
 import { Image } from 'astro:assets'
-import AnsiCThumb from '@/assets/ThumbnailCourses/AnsiC.webp'
-import laptop from '@/assets/Course/Laptop.webp'
+
+const { course } = Astro.props
 ---
 
 <section class="bg-black pt-16 md:pt-0">
-	<div class="relative mx-auto max-w-7xl overflow-x-hidden">
+	<div class="relative mx-auto max-w-7xl">
 		<Image
 			id="heroCarrer"
-			src={AnsiCThumb}
+			src={course.bannerSrc}
 			width={1280}
 			height={720}
 			alt="MMJ Smart Electronics"
@@ -20,7 +20,7 @@ import laptop from '@/assets/Course/Laptop.webp'
 			<h1
 				class="text-pretty text-lg font-normal uppercase leading-normal tracking-wide text-white sm:text-lg md:text-3xl lg:max-w-lg lg:text-start lg:text-3xl lg:leading-tight lg:tracking-wider xl:text-4xl"
 			>
-				Microcontroladores PIC y Comunicación Inalámbrica Lora
+				{course.title}
 				<br />
 			</h1>
 			<a
@@ -30,14 +30,15 @@ import laptop from '@/assets/Course/Laptop.webp'
 			>
 		</div>
 		<Image
-			src={laptop}
-			width={640}
+			src={course.laptopImage}
+			width={768}
 			height={720}
 			alt="MMJ Smart Electronics"
-			class="absolute -right-32 bottom-0 z-50 hidden lg:block xl:right-0"
+			class="absolute -right-48 bottom-0 z-10 hidden lg:-bottom-10 lg:block xl:-right-24"
 		/>
 	</div>
 </section>
+
 <style>
 	h1 {
 		text-shadow: 0px 5px 21px rgba(0, 0, 0, 0.6);

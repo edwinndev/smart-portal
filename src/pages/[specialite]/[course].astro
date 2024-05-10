@@ -12,6 +12,7 @@ import OtherCourses from '@/sections/course/OtherCourses.astro'
 import FAQ from '@/sections/course/FAQ.astro'
 import Kit from '@/sections/course/Kit.astro'
 import WhyChoose from '@/sections/course/WhyChoose.astro'
+import { courses } from '@/data/course'
 
 export function getStaticPaths() {
 	return [
@@ -24,12 +25,12 @@ const { specialite, course } = Astro.params
 ---
 
 <Layout title="MMJ Smart Electronics">
-	<HeroCourse />
-	<Description />
-	<NeedKnow />
-	<WhatYouLearn />
+	<HeroCourse course={courses[`${course}` as keyof typeof courses]} />
+	<Description course={courses[`${course}` as keyof typeof courses]} />
+	<NeedKnow course={courses[`${course}` as keyof typeof courses]} />
+	<WhatYouLearn course={courses[`${course}` as keyof typeof courses]} />
 	<Beneficts />
-	<Proyects />
+	<Proyects course={courses[`${course}` as keyof typeof courses]} />
 	<TechLearn />
 	<Kit />
 	<WhyChoose />

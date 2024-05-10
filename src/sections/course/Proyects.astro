@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets'
 import check from '@public/svg/check.svg'
+
+const { course } = Astro.props
 ---
 
 <section class="mx-auto max-w-7xl px-8 py-12">
@@ -9,97 +11,22 @@ import check from '@public/svg/check.svg'
 	>
 		Proyectos que desarrollaremos en el curso
 	</h2>
-	<ul class="flex flex-wrap items-center justify-center gap-4">
-		<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-			<Image
-				src={check}
-				alt="ícono de check"
-				width={24}
-				height={24}
-				class="pt-1 md:pt-2"
-			/>
-			<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-				aut?.
-			</p>
-		</li>
-		<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-			<Image
-				src={check}
-				alt="ícono de check"
-				width={24}
-				height={24}
-				class="pt-1 md:pt-2"
-			/>
-			<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-				aut?.
-			</p>
-		</li>
-		<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-			<Image
-				src={check}
-				alt="ícono de check"
-				width={24}
-				height={24}
-				class="pt-1 md:pt-2"
-			/>
-			<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-				aut?.
-			</p>
-		</li>
-		<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-			<Image
-				src={check}
-				alt="ícono de check"
-				width={24}
-				height={24}
-				class="pt-1 md:pt-2"
-			/>
-			<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-				aut?.
-			</p>
-		</li>
-		<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-			<Image
-				src={check}
-				alt="ícono de check"
-				width={24}
-				height={24}
-				class="pt-1 md:pt-2"
-			/>
-			<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-				aut?.
-			</p>
-		</li>
-		<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-			<Image
-				src={check}
-				alt="ícono de check"
-				width={24}
-				height={24}
-				class="pt-1 md:pt-2"
-			/>
-			<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-				aut?.
-			</p>
-		</li>
-		<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-			<Image
-				src={check}
-				alt="ícono de check"
-				width={24}
-				height={24}
-				class="pt-1 md:pt-2"
-			/>
-			<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-				aut?.
-			</p>
-		</li>
+	<ul class="flex flex-col items-start justify-start gap-4">
+		{
+			course.proyects.map((proyect: string) => (
+				<li class="flex items-start justify-start gap-2 lg:max-w-md">
+					<Image
+						src={check}
+						alt="ícono de check"
+						width={24}
+						height={24}
+						class="pt-1 md:pt-2"
+					/>
+					<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
+						{proyect}
+					</p>
+				</li>
+			))
+		}
 	</ul>
 </section>

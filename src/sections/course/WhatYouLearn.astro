@@ -1,8 +1,14 @@
+---
+const { course } = Astro.props
+---
+
 <section class="mx-auto max-w-6xl py-12">
-	<h2 class="mb-8 text-center text-xl font-semibold uppercase md:text-3xl">
+	<h2
+		class="mx-auto mb-8 max-w-lg text-center text-xl font-semibold uppercase md:text-3xl"
+	>
 		¿Qué aprenderás en esta especialización?
 	</h2>
-	<div class="m-4 rounded-lg bg-white p-8 shadow-md shadow-black">
+	<div class="m-4 rounded-2xl bg-white p-8 shadow-md shadow-black">
 		<div class="slider">
 			<input
 				class="hidden"
@@ -19,143 +25,37 @@
 
 			<!-- </div> -->
 			<div class="content">
-				<div class="mb-4">
-					<label
-						for="acordeon1"
-						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
-					>
-						Tema1: Sé un profesional con altium
-					</label>
-					<ul id="ul1" class="max-h-0 overflow-hidden px-8">
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-					</ul>
-				</div>
-				<div class="mb-4">
-					<label
-						for="acordeon2"
-						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
-					>
-						Tema1: Sé un profesional con altium
-					</label>
-					<ul id="ul2" class="max-h-0 overflow-hidden px-8">
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-					</ul>
-				</div>
-				<div class="mb-4">
-					<label
-						for="acordeon3"
-						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
-					>
-						Tema1: Sé un profesional con altium
-					</label>
-					<ul id="ul3" class="max-h-0 overflow-hidden px-8">
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-					</ul>
-				</div>
-				<div class="mb-4">
-					<label
-						for="acordeon4"
-						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
-					>
-						Tema1: Sé un profesional con altium
-					</label>
-					<ul id="ul4" class="max-h-0 overflow-hidden px-8">
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-					</ul>
-				</div>
-				<div class="mb-4">
-					<label
-						for="acordeon5"
-						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
-					>
-						Tema1: Sé un profesional con altium
-					</label>
-					<ul id="ul5" class="max-h-0 overflow-hidden px-8">
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-					</ul>
-				</div>
-				<div class="mb-4">
-					<label
-						for="acordeon6"
-						class="block rounded-lg bg-stone-200 px-8 py-3 font-semibold text-black shadow shadow-stone-900 lg:text-xl"
-					>
-						Tema1: Sé un profesional con altium
-					</label>
-					<ul id="ul6" class="max-h-0 overflow-hidden px-8">
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-						<li class="mt-2 font-normal tracking-wide lg:text-lg">
-							&bull; Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-						</li>
-					</ul>
-				</div>
+				{
+					course.syllabus.map(
+						(syllabu: { theme: string; topics: string[] }, index: any) => (
+							<div class="mb-4">
+								<label
+									for={`acordeon${index + 1}`}
+									class="flex items-center gap-8"
+								>
+									<p class="grid h-10 w-10 place-content-center bg-black text-white">
+										{index + 1}
+									</p>
+									<p class="flex h-10 w-full items-center rounded-lg bg-stone-200 px-8 font-semibold text-black shadow shadow-stone-900 lg:text-xl">
+										{`Tema ${index + 1}: ${syllabu.theme}`}
+									</p>
+								</label>
+								<ul class="max-h-0 overflow-hidden px-24">
+									{syllabu.topics.map((topic: string) => (
+										<li class="mt-2 font-normal tracking-wide lg:text-lg">
+											&bull; {topic}
+										</li>
+									))}
+								</ul>
+							</div>
+						),
+					)
+				}
 			</div>
 		</div>
 		<a
 			class="mx-auto mt-8 block max-w-96 rounded bg-black py-2 text-center text-lg font-medium uppercase text-white"
-			href="">Descarga el temario completo</a
+			href={course.syllabusSrc}>Descarga el temario completo</a
 		>
 	</div>
 </section>

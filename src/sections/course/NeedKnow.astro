@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets'
 import peoples from '@public/svg/peoples.svg'
 import list from '@public/svg/list.svg'
+
+const { course } = Astro.props
 ---
 
 <section class="bg-black py-12 md:px-4">
@@ -22,10 +24,7 @@ import list from '@public/svg/list.svg'
 			<p
 				class="text-pretty text-center text-sm font-normal text-white md:text-start md:text-base md:leading-5 md:text-black lg:text-start lg:text-xl lg:font-normal lg:tracking-wide"
 			>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod deleniti
-				distinctio reiciendis molestias harum animi, corrupti excepturi,
-				molestiae ratione eius non laborum nesciunt quis nihil iste, perferendis
-				earum a amet.
+				{course.clients}
 			</p>
 		</div>
 		<div class="md:pl-8">
@@ -42,10 +41,7 @@ import list from '@public/svg/list.svg'
 			<p
 				class="text-pretty text-center text-sm font-normal text-white md:text-start md:text-base md:leading-5 md:text-black lg:text-start lg:text-xl lg:font-normal lg:tracking-wide"
 			>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod deleniti
-				distinctio reiciendis molestias harum animi, corrupti excepturi,
-				molestiae ratione eius non laborum nesciunt quis nihil iste, perferendis
-				earum a amet.
+				{course.NeedKnow}
 			</p>
 		</div>
 	</div>
