@@ -20,22 +20,22 @@
 
 	<div
 		id="nav-acordeon"
-		class="absolute inset-x-0 top-20 z-[60] h-0 overflow-hidden bg-slate-400 shadow-md shadow-slate-100 transition-all duration-300 ease-out"
+		class="absolute inset-x-0 top-0 -z-10 h-0 overflow-hidden bg-black shadow-md shadow-slate-100 transition-all duration-300 ease-out"
 	>
 		<ul class="flex h-full flex-col justify-center gap-8 text-white">
-			<li class="w-full text-center font-medium">
+			<li class="w-full text-center text-lg font-normal tracking-wider">
 				<a class="block w-full" href="/nosotros">Nosotros</a>
 			</li>
-			<li class="text-center font-medium">
+			<li class="text-center text-lg font-normal tracking-wider">
 				<a class="block w-full" href="/cursos">Cursos</a>
 			</li>
-			<li class="text-center font-medium">
+			<li class="text-center text-lg font-normal tracking-wider">
 				<a class="block w-full" href="">Servicios</a>
 			</li>
-			<li class="text-center font-medium">
+			<li class="text-center text-lg font-normal tracking-wider">
 				<a class="block w-full" href="">Productos</a>
 			</li>
-			<li class="text-center font-medium">
+			<li class="text-center text-lg font-normal tracking-wider">
 				<a class="block w-full" href="">Contáctanos</a>
 			</li>
 		</ul>
@@ -69,9 +69,9 @@
 
 				if (isOpen) {
 					navAcorderon?.classList.remove('h-0')
-					navAcorderon?.classList.add('h-64')
+					navAcorderon?.classList.add('h-96')
 				} else {
-					navAcorderon?.classList.remove('h-64')
+					navAcorderon?.classList.remove('h-96')
 					navAcorderon?.classList.add('h-0')
 				}
 			})

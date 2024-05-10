@@ -1,52 +1,44 @@
 ---
 import { Image } from 'astro:assets'
-import SistemasEmbebidos from '@/assets/Inicio/DataAdq.webp'
 
-const { title } = Astro.props
+const { proyect } = Astro.props
 ---
 
 <div>
 	<div
-		class="snap-center place-content-center lg:grid lg:w-screen lg:grid-cols-[512px_minmax(400px,_640px)] lg:grid-rows-1 lg:gap-8 lg:px-4"
+		class="snap-center place-content-center items-start lg:grid lg:w-screen lg:grid-cols-[512px_minmax(400px,_640px)] lg:grid-rows-1 lg:gap-8 lg:px-4"
 	>
 		<Image
-			src={SistemasEmbebidos}
+			src={proyect.image}
 			alt="Sistemas embebidos"
 			width={512}
 			height={512}
-			class="mx-auto hidden rounded-xl shadow-lg lg:block lg:w-[512px] lg:self-end"
+			class="mx-auto hidden rounded-xl shadow-lg lg:block lg:w-[512px] lg:self-center"
 		/>
 		<div>
 			<h3
 				class="mb-4 w-screen text-pretty px-4 text-center text-2xl font-bold uppercase text-black lg:w-auto lg:max-w-xl lg:px-0 lg:text-start lg:text-3xl"
 			>
-				{title}
+				{proyect.title}
 			</h3>
 			<p
 				class="mx-auto mb-8 max-w-80 text-pretty text-center text-sm font-medium md:max-w-xl md:text-base lg:mx-0 lg:mb-16 lg:max-w-xl lg:text-start lg:text-xl lg:font-normal lg:tracking-wide xl:max-w-3xl"
 			>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ad rem,
-				harum veritatis vel consequatur quia aut odit sed error laborum,
-				corporis iusto excepturi incidunt sint quas illum eveniet deleniti.
+				{proyect.description}
 			</p>
 			<ul
 				class="mx-auto flex max-w-96 flex-wrap items-center justify-center gap-4 lg:mx-0 lg:max-w-xl lg:justify-start xl:gap-8"
 			>
-				<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
-					Gran alcance de medición
-				</li>
-				<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
-					Gran alcance de medición
-				</li>
-				<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
-					Gran alcance de medición
-				</li>
-				<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
-					Gran alcance de medición
-				</li>
+				{
+					proyect.highs.map((high: string) => (
+						<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
+							{high}
+						</li>
+					))
+				}
 			</ul>
 			<a
-				href="#"
+				href={proyect.nextPage}
 				class="mx-auto mt-8 block w-40 rounded-lg bg-black py-2 text-center font-medium text-white lg:mx-0 lg:mt-16 lg:w-auto lg:max-w-xl lg:transform lg:rounded-2xl lg:px-4 lg:py-3 lg:text-lg lg:font-bold lg:uppercase lg:tracking-wider lg:shadow-lg lg:transition lg:duration-300 lg:ease-in-out lg:hover:scale-105 lg:hover:bg-gray-800 lg:hover:shadow-xl lg:active:scale-100 lg:active:bg-gray-900"
 				>Ver más</a
 			>

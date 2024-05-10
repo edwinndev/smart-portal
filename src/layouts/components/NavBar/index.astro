@@ -1,9 +1,22 @@
 ---
+import { Image } from 'astro:assets'
 import HamburguerNav from './Hamburguer.astro'
+import servicesSW from '@public/svg/ServicesSW-Icon.svg'
+import servicesHW from '@public/svg/ServicesHW-Icon.svg'
+import consulting from '@public/svg/Consulting.svg'
+import firmwareIcon from '@public/svg/FirmwareIcon.svg'
+import softwareIcon from '@public/svg/SoftwareIcon.svg'
+import iotIcon from '@public/svg/IoTIcon.svg'
+import hardwareIcon from '@public/svg/HardwareIcon.svg'
+import autoIcon from '@public/svg/AutoIcon.svg'
+import presencialIcon from '@public/svg/PresencialIcon.svg'
+import Triangle from './Triangle.astro'
 ---
 
 <nav class="fixed z-50 w-full bg-gradient-to-b from-slate-500 pb-2">
-	<div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-12">
+	<div
+		class="relative mx-auto flex h-20 max-w-7xl items-center justify-between px-4 md:px-8 lg:px-12"
+	>
 		<a href="/">
 			<img
 				src="/images/MMJ-Branding.png"
@@ -13,16 +26,178 @@ import HamburguerNav from './Hamburguer.astro'
 			/>
 		</a>
 		<ul
-			class="absolute hidden gap-10 text-base font-bold uppercase text-white lg:visible lg:relative lg:flex"
+			class="hidden gap-10 text-base font-bold uppercase text-white lg:visible lg:flex"
 		>
-			<a class="text-lg font-medium hover:underline" href="/nosotros"
-				>Nosotros</a
+			<a
+				class="cursor-pointer text-lg font-medium hover:underline"
+				href="/nosotros">Nosotros</a
 			>
-			<a class="text-lg font-medium hover:underline" href="/cursos">Cursos</a>
-			<a class="text-lg font-medium hover:underline" href="#">Servicios</a>
-			<a class="text-lg font-medium hover:underline" href="#">Proyectos</a>
-			<a class="text-lg font-medium hover:underline" href="#">Contáctanos</a>
+			<span
+				id="cursosNav"
+				class="cursor-pointer text-lg font-medium hover:underline"
+				>Cursos
+				<div id="cursosNavFloat" class="hidden">
+					<div class="absolute ml-5 mt-3">
+						<Triangle />
+					</div>
+					<div class="absolute left-0 top-20 mr-12 w-full px-12">
+						<ul
+							class="flex w-full items-center justify-evenly rounded-xl bg-white shadow-lg"
+						>
+							<a
+								href="/firmware"
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={firmwareIcon}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> Firmware </span>
+							</a>
+							<a
+								href="software"
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={softwareIcon}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> Software </span>
+							</a>
+							<a
+								href="iot"
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={iotIcon}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> IoT </span>
+							</a>
+							<a
+								href="hardware"
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={hardwareIcon}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> Hardware </span>
+							</a>
+							<a
+								href="auto"
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={autoIcon}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> Automatización </span>
+							</a>
+							<a
+								href="presencial"
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={presencialIcon}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> Presenciales </span>
+							</a>
+						</ul>
+					</div>
+				</div>
+			</span>
+			<span
+				id="servicesNav"
+				class="cursor-pointer text-lg font-medium hover:underline"
+				>Servicios
+				<div id="servicesNavFloat" class="hidden">
+					<div class="absolute ml-8 mt-3">
+						<Triangle />
+					</div>
+					<div class="absolute left-0 top-20 mr-12 w-full px-12">
+						<ul
+							class="flex w-full items-center justify-evenly rounded-xl bg-white shadow-lg"
+						>
+							<a
+								href=""
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={servicesSW}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> Software </span>
+							</a>
+							<a
+								href=""
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={servicesHW}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> Hardware </span>
+							</a>
+							<a
+								href=""
+								class="flex flex-col items-center gap-2 py-4 text-xl text-black"
+							>
+								<Image
+									src={consulting}
+									alt="Ícono sobre el servicio de desarrollo de software"
+									width={48}
+									height={48}
+								/>
+								<span> Consultoría </span>
+							</a>
+						</ul>
+					</div>
+				</div>
+			</span>
+			<a
+				class="cursor-pointer text-lg font-medium hover:underline"
+				href="/proyectos">Proyectos</a
+			>
+			<a class="cursor-pointer text-lg font-medium hover:underline" href="#"
+				>Contáctanos</a
+			>
 		</ul>
 		<HamburguerNav />
 	</div>
 </nav>
+
+<script>
+	const servicesNav = document.getElementById('servicesNav')
+	const cursosNav = document.getElementById('cursosNav')
+	const servicesNavFloat = document.getElementById('servicesNavFloat')
+	const cursosNavFloat = document.getElementById('cursosNavFloat')
+
+	if (servicesNav && cursosNav && servicesNavFloat && cursosNavFloat) {
+		servicesNav.addEventListener('click', () => {
+			servicesNavFloat.classList.toggle('hidden')
+			cursosNavFloat.classList.add('hidden')
+		})
+		cursosNav.addEventListener('click', () => {
+			cursosNavFloat.classList.toggle('hidden')
+			servicesNavFloat.classList.add('hidden')
+		})
+	}
+</script>
