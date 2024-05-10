@@ -22,24 +22,24 @@ const { proyect } = Astro.props
 				{proyect.title}
 			</h3>
 			<p
-				class="mx-auto mb-8 max-w-80 text-pretty text-center text-sm font-medium md:max-w-xl md:text-base lg:mx-0 lg:mb-16 lg:max-w-xl lg:text-start lg:text-xl lg:font-normal lg:tracking-wide xl:max-w-3xl"
+				class="mx-auto mb-8 max-w-80 text-pretty text-center text-sm font-medium md:max-w-xl md:text-base lg:mx-0 lg:mb-4 lg:max-w-xl lg:text-start lg:text-xl lg:font-normal lg:tracking-wide xl:max-w-3xl"
 			>
 				{proyect.description}
 			</p>
 			<ul
-				class="mx-auto flex max-w-96 flex-wrap items-center justify-center gap-4 lg:mx-0 lg:max-w-xl lg:justify-start xl:gap-8"
+				class="mx-auto flex max-w-96 flex-wrap items-center justify-center gap-4 lg:mx-0 lg:grid lg:max-w-xl lg:grid-cols-2 lg:grid-rows-2 lg:justify-start xl:gap-8"
 			>
 				{
 					proyect.highs.map((high: string) => (
 						<li class="text-sm font-medium lg:text-lg xl:text-2xl xl:font-normal">
-							{high}
+							&bull; {high}
 						</li>
 					))
 				}
 			</ul>
 			<a
 				href={proyect.nextPage}
-				class="mx-auto mt-8 block w-40 rounded-lg bg-black py-2 text-center font-medium text-white lg:mx-0 lg:mt-16 lg:w-auto lg:max-w-xl lg:transform lg:rounded-2xl lg:px-4 lg:py-3 lg:text-lg lg:font-bold lg:uppercase lg:tracking-wider lg:shadow-lg lg:transition lg:duration-300 lg:ease-in-out lg:hover:scale-105 lg:hover:bg-gray-800 lg:hover:shadow-xl lg:active:scale-100 lg:active:bg-gray-900"
+				class="mx-auto mt-8 block w-40 rounded-lg bg-black py-2 text-center font-medium text-white lg:mx-0 lg:mt-4 lg:w-auto lg:max-w-xl lg:transform lg:rounded-2xl lg:px-4 lg:py-3 lg:text-lg lg:font-bold lg:uppercase lg:tracking-wider lg:shadow-lg lg:transition lg:duration-300 lg:ease-in-out lg:hover:scale-105 lg:hover:bg-gray-800 lg:hover:shadow-xl lg:active:scale-100 lg:active:bg-gray-900"
 				>Ver más</a
 			>
 		</div>

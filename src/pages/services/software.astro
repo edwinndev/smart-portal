@@ -1,0 +1,51 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import softwareBanner from '@/assets/Banners/software.webp'
+import AnsiCThumb from '@/assets/ThumbnailCourses/AnsiC.webp'
+import HeroServices from '@/sections/services/HeroServices.astro'
+import TheServices from '@/sections/services/TheServices.astro'
+
+const service = {
+	title: 'Desarrollo de software',
+	bannerSrc: softwareBanner,
+	services: [
+		{
+			name: 'Software Industrial (HMI, SCADA, DCS)',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/software/industrial-software',
+			imgAlt: 'Software Industrial (HMI, SCADA, DCS)',
+		},
+		{
+			name: 'Software para adquisición de datos',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/software/data-acquisition',
+			imgAlt: 'Software para adquisición de datos',
+		},
+		{
+			name: 'Desarrollo de Sottware para IoT',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/software/iot',
+			imgAlt: 'Desarrollo de Sottware para IoT',
+		},
+		{
+			name: 'Desarrollo de Software para BMS',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/software/bms',
+			imgAlt: 'Desarrollo de Software para BMS',
+		},
+		{
+			name: 'Desarrollo de firmware para sistemas integrados',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/software/firmware',
+			imgAlt: 'Desarrollo de firmware para sistemas integrados',
+		},
+	],
+}
+---
+
+<Layout title="MMJ Smart Electronics">
+	<div class="overflow-x-hidden">
+		<HeroServices service={service} />
+		<TheServices service={service} />
+	</div>
+</Layout>

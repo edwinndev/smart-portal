@@ -1,0 +1,19 @@
+---
+import CardSpecificService from '@/components/CardSpecificService.astro'
+const { service } = Astro.props
+---
+
+<section class="mx-auto max-w-7xl py-12">
+	<h2
+		class="mb-8 text-center text-xl font-semibold uppercase md:mb-12 md:text-3xl"
+	>
+		{service.title}
+	</h2>
+	<ul class="flex flex-wrap justify-center gap-8">
+		{
+			service.services.map((service: any) => (
+				<CardSpecificService service={service} />
+			))
+		}
+	</ul>
+</section>
