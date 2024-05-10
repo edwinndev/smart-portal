@@ -1,0 +1,59 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import hardwareBanner from '@/assets/Banners/hardware.webp'
+import AnsiCThumb from '@/assets/ThumbnailCourses/AnsiC.webp'
+import HeroServices from '@/sections/services/HeroServices.astro'
+import TheServices from '@/sections/services/TheServices.astro'
+
+const service = {
+	title: 'Desarrollo de Hardware',
+	description:
+		'Desde la concepción inicial hasta la implementación final, ofrecemos soluciones personalizadas y de alta calidad que se adaptan a tus requerimientos. Ya sea que necesites tarjetas PCB personalizadas, diseño mecánico, ensamblaje, prototipos, productos finales o consultoría especializada, estamos aquí para ayudarte a hacer realidad tus proyectos',
+	bannerSrc: hardwareBanner,
+	services: [
+		{
+			name: 'Fabricación de circuitos impresos pcbs',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/hardware/pcbs',
+			imgAlt: 'Fabricación de circuitos impresos pcbs',
+		},
+		{
+			name: 'Ensamblaje de circuitos impresos',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/hardware/ensamblaje',
+			imgAlt: 'Ensamblaje de circuitos impresos',
+		},
+		{
+			name: 'Diseño de circuitos impresos PCBs',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/hardware/diseño',
+			imgAlt: 'Diseño de circuitos impresos PCBs',
+		},
+		{
+			name: 'Desarrollo de equipos electrónicos',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/hardware/equipos',
+			imgAlt: 'Desarrollo de equipos electrónicos',
+		},
+		{
+			name: 'Reparación y mantenimiento de PCBs',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/hardware/reparacion',
+			imgAlt: 'Reparación y mantenimiento de PCBs',
+		},
+		{
+			name: 'Ingeniería inversa de PCBs',
+			imgSrc: AnsiCThumb,
+			nextPage: '/services/hardware/inversa',
+			imgAlt: 'Reparación y mantenimiento de PCBs',
+		},
+	],
+}
+---
+
+<Layout title="MMJ Smart Electronics">
+	<div class="overflow-x-hidden">
+		<HeroServices service={service} />
+		<TheServices service={service} />
+	</div>
+</Layout>

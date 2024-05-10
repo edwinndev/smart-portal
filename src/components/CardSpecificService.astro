@@ -4,15 +4,19 @@ import { Image } from 'astro:assets'
 const { service } = Astro.props
 ---
 
-<div class="flex w-[300px] flex-col items-center">
-	<Image
-		src={service.imgSrc}
-		alt={service.imgAlt}
-		width={300}
-		height={200}
-		class={''}
-	/>
-	<p class="py-10">
-		{service.name}
-	</p>
-</div>
+<a href={service.nextPage}>
+	<div class="flex w-[300px] flex-col items-center">
+		<Image
+			src={service.imgSrc}
+			alt={service.imgAlt}
+			width={300}
+			height={200}
+			class={''}
+		/>
+		<p
+			class="w-full rounded-b-xl bg-black py-4 text-center font-medium text-white"
+		>
+			{service.name}
+		</p>
+	</div>
+</a>

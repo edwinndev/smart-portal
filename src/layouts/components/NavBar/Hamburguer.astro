@@ -1,36 +1,53 @@
-<nav-burguer
-	id="hamburguer-menu"
-	class="flex flex-col items-center justify-center gap-1 lg:invisible lg:absolute"
->
+<nav-burguer id="hamburguer-menu" class="lg:invisible lg:absolute">
 	<span
-		id="bar1"
-		class="block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out"
+		id="hamburguer-icon"
+		class="flex flex-col items-center justify-center gap-1"
 	>
-	</span>
-	<span
-		id="bar2"
-		class="my-0.5 block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out"
-	>
-	</span>
-	<span
-		id="bar3"
-		class="block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out"
-	>
+		<span
+			id="bar1"
+			class="block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out"
+		>
+		</span>
+		<span
+			id="bar2"
+			class="my-0.5 block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out"
+		>
+		</span>
+		<span
+			id="bar3"
+			class="block h-0.5 w-6 rounded-sm bg-white transition-all duration-300 ease-out"
+		>
+		</span>
 	</span>
 
 	<div
 		id="nav-acordeon"
-		class="absolute inset-x-0 top-0 -z-10 h-0 overflow-hidden bg-black shadow-md shadow-slate-100 transition-all duration-300 ease-out"
+		class="invisible absolute inset-x-0 top-0 -z-10 max-h-0 overflow-hidden bg-black py-20 shadow-md shadow-slate-100 transition-all duration-300 ease-out"
 	>
 		<ul class="flex h-full flex-col justify-center gap-8 text-white">
 			<li class="w-full text-center text-lg font-normal tracking-wider">
 				<a class="block w-full" href="/nosotros">Nosotros</a>
 			</li>
 			<li class="text-center text-lg font-normal tracking-wider">
-				<a class="block w-full" href="/cursos">Cursos</a>
+				<span id="cursosNavHamburguer" class="block w-full">Cursos</span>
+				<ul class="flex h-0 flex-col items-center overflow-hidden">
+					<a class="mt-2 text-gray-400" href="/firmware">Firmware</a>
+					<a class="mt-2 text-gray-400" href="/software">Software</a>
+					<a class="mt-2 text-gray-400" href="/iot">IoT</a>
+					<a class="mt-2 text-gray-400" href="/hardware">Hardware</a>
+					<a class="mt-2 text-gray-400" href="/auto">Automatización</a>
+					<a class="mt-2 text-gray-400" href="/presencial">Presencial</a>
+				</ul>
 			</li>
 			<li class="text-center text-lg font-normal tracking-wider">
-				<a class="block w-full" href="">Servicios</a>
+				<span id="servicesNavHamburguer" class="block w-full">Servicios</span>
+				<ul class="flex h-0 flex-col items-center overflow-hidden">
+					<a class="mt-2 text-gray-400" href="/services/software">Software</a>
+					<a class="mt-2 text-gray-400" href="/services/hardware">Hardware</a>
+					<a class="mt-2 text-gray-400" href="/services/capacitaciones"
+						>Capacitaciones</a
+					>
+				</ul>
 			</li>
 			<li class="text-center text-lg font-normal tracking-wider">
 				<a class="block w-full" href="">Productos</a>
@@ -52,27 +69,52 @@
 			let bar2 = this.querySelector('#bar2')
 			let bar3 = this.querySelector('#bar3')
 
-			let navAcorderon = this.querySelector('#nav-acordeon')
+			const hamburguerIcon = this.querySelector('#hamburguer-icon')
 
-			this.addEventListener('click', () => {
+			let navAcorderon = this.querySelector('#nav-acordeon')
+			const cursosNavHamburguer = this.querySelector('#cursosNavHamburguer')
+			const cursosOptions = this.querySelector('#cursosNavHamburguer ~ ul')
+
+			if (cursosNavHamburguer && cursosOptions) {
+				cursosNavHamburguer.addEventListener('click', () => {
+					cursosOptions.classList.toggle('h-0')
+					cursosOptions.classList.toggle('h-auto')
+				})
+			}
+
+			const servicesNavHamburguer = this.querySelector('#servicesNavHamburguer')
+			const servicesOptions = this.querySelector('#servicesNavHamburguer ~ ul')
+
+			if (servicesNavHamburguer && servicesOptions) {
+				servicesNavHamburguer.addEventListener('click', () => {
+					servicesOptions.classList.toggle('h-0')
+					servicesOptions.classList.toggle('h-auto')
+				})
+			}
+
+			hamburguerIcon?.addEventListener('click', () => {
 				isOpen = !isOpen // Close - Open . . .
 
 				this.classList.toggle('gap-1')
 
-				bar1?.classList.toggle('translate-y-1')
+				bar1?.classList.toggle('translate-y-2')
 				bar1?.classList.toggle('rotate-45')
 
 				bar2?.classList.toggle('opacity-0')
 
-				bar3?.classList.toggle('-translate-y-1')
+				bar3?.classList.toggle('-translate-y-2')
 				bar3?.classList.toggle('-rotate-45')
 
 				if (isOpen) {
-					navAcorderon?.classList.remove('h-0')
-					navAcorderon?.classList.add('h-96')
+					navAcorderon?.classList.remove('invisible')
+					navAcorderon?.classList.remove('max-h-0')
+					navAcorderon?.classList.add('visible')
+					navAcorderon?.classList.add('max-h-screen')
 				} else {
-					navAcorderon?.classList.remove('h-96')
-					navAcorderon?.classList.add('h-0')
+					navAcorderon?.classList.remove('visible')
+					navAcorderon?.classList.remove('max-h-screen')
+					navAcorderon?.classList.add('invisible')
+					navAcorderon?.classList.add('max-h-0')
 				}
 			})
 		}

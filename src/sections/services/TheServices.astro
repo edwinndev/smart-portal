@@ -5,11 +5,18 @@ const { service } = Astro.props
 
 <section class="mx-auto max-w-7xl py-12">
 	<h2
-		class="mb-8 text-center text-xl font-semibold uppercase md:mb-12 md:text-3xl"
+		class="mb-4 text-center text-xl font-semibold uppercase md:mb-4 md:text-3xl"
 	>
 		{service.title}
 	</h2>
-	<ul class="flex flex-wrap justify-center gap-8">
+	<p
+		class="mx-auto mb-8 max-w-5xl text-pretty px-8 text-center text-lg leading-7 lg:mb-12 lg:text-2xl"
+	>
+		{service.description}
+	</p>
+	<ul
+		class="mx-auto flex max-w-5xl flex-wrap justify-center gap-12 lg:justify-start"
+	>
 		{
 			service.services.map((service: any) => (
 				<CardSpecificService service={service} />
