@@ -1,6 +1,13 @@
 import laptop from '@/assets/Course/Laptop.webp'
 import tablet from '@/assets/Course/Tablet.webp'
 import AnsiCThumb from '@/assets/ThumbnailCourses/AnsiC.webp'
+import mplabxide from '@/assets/Course/mplabxide.webp'
+import xc8 from '@/assets/Course/xc8.webp'
+import labview from '@/assets/Course/labview.webp'
+import proteus from '@/assets/Course/proteus.webp'
+import picAsm from '@/assets/ThumbnailCourses/picAsm.webp'
+import AltiumThumb from '@/assets/ThumbnailCourses/Altium.webp'
+import AnalogicaDiseñoThumb from '@/assets/ThumbnailCourses/AnalogicaDiseño.webp'
 
 
 export const courses = {
@@ -90,6 +97,55 @@ export const courses = {
       "Sistema de monitoreo meteorológico",
       "Sistema de adquisición de datos HMI",
       "Sistema de monitoreo/control por bluetooth y red celular"
+    ],
+    youLearns: [
+      {
+      imageSrc: mplabxide,
+      title: "MPlab X IDE"
+      },
+      {
+      imageSrc: xc8,
+      title: "MPlab XC8 Compiler"
+      },
+      {
+      imageSrc: proteus,
+      title: "Proteus"
+      },
+      {
+      imageSrc: labview,
+      title: "Labview"
+      }
+    ],
+    KitImageSrc: tablet,
+    kits: [
+      {
+        title: 'Entrenador PIC Universal MMJ',
+        description: 'La tarjeta de desarrollo es compatible con cualquier Microcontrolador de la serie 16/18 de 40 pines de microchip. Cuenta con alimentación externa de hasta 36V o USB, 8leds, pantalla LCD, 4 pulsadores, display multiplexado, puerto RS232/USB y 3 expansores mikrobuses con la capacidad de conectarle más de 1500 dispositivos externos entre sensores, actuadores, gateways, pantallas, interfaces, etc.'
+      },
+      {
+        title: 'Curiosity Nano',
+        description: 'La tarjeta de desarrollo utiliza un microcontrolador PIC18F57Q43 cuenta con un interruptor de usuario mecánico, un LED de usuario amarillo, depurador integrado, LED verde de alimentación y estado, programación y depuración, puerto COM virtual (CDC), canal de analizador lógico (GPIO), alimentación por USB y una corriente de salida máxima de 500 mA.'
+      }
+    ],
+    OtherCourses: [
+      {
+        name: "Especialización en diseño electrónico profesional con Altium Designer y Normas IPC",
+        imgSrc: AltiumThumb,
+        nextPage: "/hardware/altium",
+        imgAlt: "Especialización en diseño electrónico profesional con Altium Designer y Normas IPC"
+      },
+      {
+        name: "Diseño de sistemas electrónicos analógicos y digitales",
+        imgSrc: AnalogicaDiseñoThumb,
+        nextPage: "/hardware/analogica-diseño",
+        imgAlt: "Diseño de sistemas electrónicos analógicos y digitales"
+      },
+      {
+        name: "DProgramación de microcontroladores PIC con el nuevo ensamblador PIC-AS XV8",
+        imgSrc: picAsm,
+        nextPage: "/firmware/pic-asm",
+        imgAlt: "DProgramación de microcontroladores PIC con el nuevo ensamblador PIC-AS XV8"
+      },
     ]
   }
 }

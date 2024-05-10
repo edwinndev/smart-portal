@@ -2,13 +2,15 @@
 import { Image } from 'astro:assets'
 import tablet from '@/assets/Course/Tablet.webp'
 import check from '@public/svg/check.svg'
+
+const { course } = Astro.props
 ---
 
 <section
 	class="mx-auto max-w-7xl py-12 lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:items-center lg:py-16"
 >
 	<Image
-		src={tablet}
+		src={course.KitImageSrc}
 		alt="Tablet"
 		width={640}
 		height={768}
@@ -20,42 +22,42 @@ import check from '@public/svg/check.svg'
 		>
 			Kit de desarrollo
 		</h2>
-		<ul class="flex flex-wrap items-center justify-center gap-4">
-			<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-				<Image
-					src={check}
-					alt="ícono de check"
-					width={24}
-					height={24}
-					class="pt-1 md:pt-2"
-				/>
-				<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-					aut?.
-				</p>
-			</li>
-			<li class="mx-auto flex items-start justify-center gap-2 lg:max-w-md">
-				<Image
-					src={check}
-					alt="ícono de check"
-					width={24}
-					height={24}
-					class="pt-1 md:pt-2"
-				/>
-				<p class="text-pretty text-start text-lg md:text-xl lg:max-w-lg">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
-					aut?.
-				</p>
-			</li>
+		<ul
+			class="flex flex-wrap items-center justify-center gap-4 lg:justify-start"
+		>
+			{
+				course.kits.map((kit: { title: string; description: string }) => (
+					<li class="flex flex-col items-start justify-center gap-2 px-6 lg:px-0">
+						<div>
+							<div class="flex items-center justify-center gap-4 lg:justify-start">
+								<Image
+									src={check}
+									alt="ícono de check"
+									width={24}
+									height={24}
+									class=""
+								/>
+								<p class="text-pretty text-start text-lg font-medium md:text-xl">
+									{kit.title}
+								</p>
+							</div>
+							<p class="text-center lg:text-start">{kit.description}</p>
+						</div>
+					</li>
+				))
+			}
 		</ul>
 		<div
-			class="flex items-center justify-center gap-4 px-4 lg:justify-start lg:px-0"
+			class="mt-4 flex items-center justify-center gap-4 px-4 lg:justify-start lg:px-8"
 		>
 			<h4
 				class="w-52 rounded bg-black py-2 text-center text-lg font-medium uppercase text-white"
 			>
 				Whatsapp
 			</h4>
+			<p class="text-pretty text-center text-sm font-medium lg:text-base">
+				Envíos a cualquier parte del mundo
+			</p>
 		</div>
 	</div>
 </section>

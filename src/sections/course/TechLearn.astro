@@ -4,6 +4,8 @@ import cloudClasroom from '@public/svg/cloudClasroom.svg'
 import books from '@public/svg/books.svg'
 import chat from '@public/svg/chat.svg'
 import { Image } from 'astro:assets'
+
+const { course } = Astro.props
 ---
 
 <section class="bg-black py-12">
@@ -15,69 +17,25 @@ import { Image } from 'astro:assets'
 	<ul
 		class="flex flex-wrap items-center justify-center gap-8 md:gap-8 lg:mx-auto lg:max-w-4xl lg:gap-12 xl:max-w-6xl xl:gap-12"
 	>
-		<l8 class="mx-auto flex items-center justify-start gap-4 md:flex-col">
-			<div class="grid h-24 w-24 place-content-center rounded-full bg-white">
-				<Image
-					src={liveScreen}
-					alt="Icono de Pantalla"
-					width={64}
-					height={64}
-					class="h-24"
-				/>
-			</div>
-			<p
-				class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-40 lg:text-pretty"
-			>
-				Clases en vivo
-			</p>
-		</l8>
-		<l8 class="mx-auto flex items-center justify-start gap-4 md:flex-col">
-			<div class="grid h-24 w-24 place-content-center rounded-full bg-white">
-				<Image
-					src={cloudClasroom}
-					alt="Icono de nube"
-					width={64}
-					height={64}
-					class="h-24"
-				/>
-			</div>
-			<p
-				class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-40 lg:text-pretty"
-			>
-				Plataforma virtual
-			</p>
-		</l8>
-		<l8 class="mx-auto flex items-center justify-start gap-4 md:flex-col">
-			<div class="grid h-24 w-24 place-content-center rounded-full bg-white">
-				<Image
-					src={books}
-					alt="Icono de libros"
-					width={64}
-					height={64}
-					class="h-24"
-				/>
-			</div>
-			<p
-				class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-56 lg:text-pretty"
-			>
-				Material de clase
-			</p>
-		</l8>
-		<li class="mx-auto flex items-center justify-start gap-4 md:flex-col">
-			<div class="grid h-24 w-24 place-content-center rounded-full bg-white">
-				<Image
-					src={chat}
-					alt="Icono de chats"
-					width={64}
-					height={64}
-					class="h-24"
-				/>
-			</div>
-			<p
-				class="w-64 max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-40 lg:text-pretty"
-			>
-				Asesoría personalizada
-			</p>
-		</li>
+		{
+			course.youLearns.map(
+				(learn: { imageSrc: ImageMetadata; title: string }) => (
+					<li class="mx-auto flex flex-col items-center justify-start gap-4 md:flex-col lg:justify-start">
+						<div class="grid h-36 w-36 place-content-center rounded-full bg-white">
+							<Image
+								src={learn.imageSrc}
+								alt="Icono de Pantalla"
+								width={128}
+								height={128}
+								class="mx-auto w-3/4"
+							/>
+						</div>
+						<p class="max-w-80 text-left text-sm font-semibold uppercase text-white md:text-center lg:max-w-52 lg:text-pretty lg:text-xl">
+							{learn.title}
+						</p>
+					</li>
+				),
+			)
+		}
 	</ul>
 </section>
