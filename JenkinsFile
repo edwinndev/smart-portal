@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        APP_PORT = 3000
+        APP_PORT = '3000'
         APP_NAME = 'smart-portal'
     }
 
@@ -17,9 +17,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Construir la imagen Docker
                 script {
-                    docker.build(APP_NAME)
+                    docker.build(APP_NAME, '.')
                 }
             }
         }
@@ -28,6 +27,7 @@ pipeline {
             steps {
                 script {
                     sh """
+                    docker ps -a
                     docker stop ${APP_NAME} || true
                     docker rm ${APP_NAME} || true
                     """
