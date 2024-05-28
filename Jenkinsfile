@@ -33,7 +33,7 @@ pipeline {
                     """
 
                     sh """
-                    docker run -d --name ${APP_NAME} -p ${APP_PORT}:${APP_PORT} ${APP_NAME}
+                    docker run -d --name ${APP_NAME} -p ${APP_PORT}:8080 ${APP_NAME}
                     """
                 }
             }
